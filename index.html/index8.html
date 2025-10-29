@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enunciado 8 </title>
+</head>
+<body>
+    <h1>Verificação de idade</h1>
+    <input type="number" id="maior" step="01" placeholder="Digite sua idade">
+    <button id="verificar">Averiquar</button>
+    <p id="pode">-</p>
+
+    <script>
+        document.getElementById('verificar').addEventListener("click",() => {
+            const converter = document.getElementById('maior')
+            if (converter >= 18){
+                document.getElementById('pode').textContent="Você é maior de idade, entrada permitida"
+            }
+            else if (converter > 0){
+                document.getElementById('pode').textContent="Você é menor de idade, entrada proibida"
+            }
+            else{
+                document.getElementById('pode').textContent="Digite uma idade valida"
+            }
+        })
+    </script>
+
+</body>
+</html>
