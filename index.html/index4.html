@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enunciado 4</title>
+</head>
+<body>
+    <h1>Some os numeros</h1>
+    <input type="number" name="" id="num1" placeholder="primeiro numero">
+    <input type="number2" name="" id="num2" placeholder="Segundo numero"> 
+    <br><br>
+    <button id="soma">somar</button>
+    <p id="result">-</p>
+    <script>
+        document.getElementById('soma').addEventListener('click', ()=>{
+        const number =Number(document.getElementById("num1").value) 
+        const number2 =Number(document.getElementById("num2").value) 
+        
+        document.getElementById("result").textContent = `A soma dos numeros é ${(number + number2).toFixed(2)}`
+
+
+        })
+        
+
+
+    </script>
+
+    
+</body>
+</html>

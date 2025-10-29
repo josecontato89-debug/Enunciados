@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enunciado 1</title>
+</head>
+<body>
+    <h1>Saudação</h1>
+    <button onclick="inicio()">Clique aqui para começar</button>
+
+    <script>
+       // *** CORREÇÃO: Declare 'nome' no escopo global (fora da função) ***
+       let nome = null; 
+
+function inicio() 
+{
+    // Agora, 'nome' mantém seu valor entre as chamadas.
+    if(nome == null || nome.trim() === ''){ 
+        
+        // *** CORREÇÃO: Não use 'let' aqui, pois a variável já foi declarada fora. ***
+        nome = window.prompt('Digite seu nome');
+
+        // Garante que a saudação só ocorre se um nome for fornecido
+        if (nome !== null && nome.trim() !== '') {
+             window.alert(`Olá, ${nome}. Saudação!`);
+        } else {
+            // Limpa 'nome' caso o usuário cancele ou insira vazio.
+            nome = null; 
+            window.alert('Nenhum nome fornecido. Tente novamente.');
+        }
+    } 
+}
+        
+    </script>
+    
+</body>
+</html>
