@@ -7,6 +7,17 @@
     <title>Enunciado 11</title>
 </head>
 <body>
-    
+    <h1>Soma de numeros pares</h1>
+    <input type="number" name= "" id="N" placeholder="N">
+    <button id="calc">Calcular</button>
+    <p id="saida"></p>
+    <script>
+    document.getElementById('calc').addEventListener('click' , ()=>{
+    const N = Number (document.getElementById ('N'). value, 10);
+    let soma = 0
+    for(let i = 2; i<= N; i += 2) soma += i;
+    document.getElementById('saida').textContent = `Soma doas pares <= ${N}: ${soma}`;
+    }) 
+    </script>
 </body>
 </html>
